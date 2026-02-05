@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    /* Основные настройки */
+    "target": "ES2022",                          /* Современный стандарт JS */
+    "module": "NodeNext",                        /* Поддержка ESM и современной Node.js */
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022"],                           /* Библиотеки типов */
+    "outDir": "./dist",                          /* Куда пойдет готовый билд */
+    "rootDir": "./src",                          /* Где искать исходники */
+    
+    /* Строгие проверки (обязательно для продвинутого кода) */
+    "strict": true,                              /* Включает все проверки типов */
+    "noImplicitAny": true,                       /* Запрет на неявный тип any */
+    "strictNullChecks": true,                    /* Защита от "null is not an object" */
+    "strictFunctionTypes": true,
+    "noUnusedLocals": true,                      /* Ошибка, если переменная не используется */
+    "noUnusedParameters": true,                  /* Ошибка, если аргумент функции не используется */
+    "noImplicitReturns": true,                   /* Все ветки функции должны возвращать значение */
+    "noFallthroughCasesInSwitch": true,          /* Запрет проваливания в switch-case */
+
+    /* Модули и совместимость */
+    "esModuleInterop": true,                     /* Совместимость с CommonJS (нужно для многих либ) */
+    "forceConsistentCasingInFileNames": true,    /* Чувствительность к регистру в именах файлов */
+    "skipLibCheck": true,                        /* Ускоряет сборку, пропуская проверку .d.ts файлов */
+    "resolveJsonModule": true,                   /* Позволяет импортить .json файлы напрямую */
+    
+    /* Дополнительно */
+    "sourceMap": true,                           /* Генерация карт для отладки (debug) */
+    "removeComments": true                       /* Удаление комментариев из итогового кода */
+  },
+  "include": [
+    "src/**/*.ts"                                /* Компилируем всё в src */
+  ],
+  "exclude": [
+    "node_modules",                              /* Игнорим зависимости */
+    "build",                                     /* Игнорим артефакты сборки C++ */
+    "**/*.test.ts"                               /* Игнорим тесты при обычном билде */
+  ]
+}
