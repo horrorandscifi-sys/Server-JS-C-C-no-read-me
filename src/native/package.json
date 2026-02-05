@@ -1,0 +1,11 @@
+{
+  "name": "advanced-cpp-js-server",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js",
+    "compile": "node-gyp rebuild"
+  },
+  "dependencies": {
+    "node-addon-api": "^7.1.0"
+  }
+}
